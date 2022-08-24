@@ -1,0 +1,52 @@
+@import "../../AppVariables.scss";
+.header {
+  //   padding: 2rem 0rem;
+  //   padding-bottom: 8rem;
+
+  //   justify-content: space-between;
+  //   align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
+
+  //   background: linear-gradient(rgba(0, 0, 0, 0.169), rgba(0, 0, 0, 0.7)),
+  //     url("../../assets/HeaderImage.jpg");
+  //   background-position: center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  color: $color-white;
+
+  &__items {
+    // padding: 0rem 2rem;
+    color: $color-grey-dark-3;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+
+  &__cart {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    fill: $color-grey-dark-3;
+    outline: none;
+    border: none;
+    &--button-icon {
+      height: 2.5rem;
+    }
+  }
+
+  //   background-image: linear-gradient(to right bottom, #ec6b6f, #b42e2e);
+  &__gallery {
+    display: flex;
+    flex-grow: 1;
+    // width: 100%;
+    // margin: 0 auto;
+    margin: 0 -3rem;
+    &-item {
+      max-width: 100%;
+      overflow: hidden;
+    }
+  }
+}
