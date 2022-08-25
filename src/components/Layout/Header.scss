@@ -9,7 +9,8 @@
   width: 100vw;
   background-color: $color-grey-light-2;
   padding: 1rem 5rem;
-  padding-bottom: 0rem;
+  // padding-bottom: 0rem;
+  // padding-top: 1rem;
   height: 6rem;
   z-index: 1000;
 
@@ -19,8 +20,10 @@
 
   // box-shadow: $shadow-light;
 
+  transition: all 0.2s;
+
   &--shadow {
-    box-shadow: $shadow-light;
+    box-shadow: $shadow-header;
     // height: 7rem;
   }
 
