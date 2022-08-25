@@ -5,11 +5,11 @@ import { HeaderCartIcon } from "../../assets/icons";
 import "./Header.scss";
 const HeaderCartButton = (props) => {
   return (
-    <button className="header__items-cart">
+    <button className="header__items__cart">
       <span>
-        <HeaderCartIcon className="header__items-cart--icon" />
+        <HeaderCartIcon className="header__items__cart__icon" />
       </span>
-      <span className="header__items-cart--counter">3</span>
+      <span className="header__items__cart__counter">3</span>
     </button>
   );
 };

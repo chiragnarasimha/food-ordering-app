@@ -1,4 +1,5 @@
 @import "../../AppVariables.scss";
+
 .header {
   position: fixed;
   box-sizing: border-box;
@@ -10,15 +11,17 @@
   padding: 1rem 5rem;
   padding-bottom: 0rem;
   height: 6rem;
+  z-index: 1000;
 
   // -- DEBUG
   // background-color: red;
   // -- DEBUG
 
-  box-shadow: $shadow-light;
+  // box-shadow: $shadow-light;
 
-  &--small {
-    height: 7rem;
+  &--shadow {
+    box-shadow: $shadow-light;
+    // height: 7rem;
   }
 
   &__items {
@@ -28,11 +31,11 @@
     // overflow: hidden;
     fill: $color-grey-dark-3;
 
-    &-logo {
+    &__logo {
       height: 4rem;
     }
 
-    &-cart {
+    &__cart {
       display: flex;
       // flex-direction: column;
       outline: none;
@@ -43,12 +46,12 @@
       cursor: pointer;
       position: relative;
 
-      &--icon {
+      &__icon {
         height: 4rem;
         padding: 0rem 0.5rem;
       }
 
-      &--counter {
+      &__counter {
         height: 2.5rem;
         width: 2.5rem;
         font-size: 1.5rem;
@@ -70,7 +73,8 @@
   //   background-image: linear-gradient(to right bottom, #ec6b6f, #b42e2e);
   &__gallery {
     display: flex;
-    &-item {
+    margin-bottom: 7rem;
+    &__item {
       max-width: 100%;
       overflow: hidden;
     }
