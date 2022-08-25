@@ -1,17 +1,18 @@
 import React from "react";
+
 import "./Header.scss";
 import HeaderImages from "../../assets/HeaderImages";
 import HeaderCartButton from "./HeaderCartButton";
+// import sushiIcon from "../../assets/sushiIcon.png";
+import { RestaurantLogo } from "../../assets/icons";
 
 const Header = () => {
   return (
-    <div className="header">
-      {/* <header className="header"> */}
-      <header>
+    <>
+      <header className={`header`}>
         <div className="header__items">
-          <h1>Sushi San</h1>
+          <RestaurantLogo className="header__items-logo" />
           <HeaderCartButton />
-          {/* <button>Cart</button> */}
         </div>
       </header>
       <div className="header__gallery">
@@ -19,7 +20,7 @@ const Header = () => {
         <img className="header__gallery-item" src={HeaderImages.img2} alt="" />
         <img className="header__gallery-item" src={HeaderImages.img3} alt="" />
       </div>
-    </div>
+    </>
   );
 };
 

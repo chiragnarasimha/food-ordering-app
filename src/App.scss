@@ -18,26 +18,36 @@ body {
   margin: auto;
   // padding: 4rem;
   // background-color: #3f3f3f;
-  background-image: linear-gradient(
-    to bottom right,
-    $color-primary-light,
-    $color-primary-dark
-  );
+  // background-image: linear-gradient(
+  //   to bottom right,
+  //   $color-primary-light,
+  //   $color-primary-dark
+  // );
+  background-color: $color-grey-light-2;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  width: 100vw;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .app {
   &__container {
-    max-width: 150rem;
-    margin: 8rem auto;
-    background-color: $color-grey-light-2;
-    box-shadow: var(--shadow-dark);
-    //-- DEBUG CODE
-    min-height: 85vh;
-    padding: 3rem;
-    padding-top: 0rem;
+    // max-width: 150rem;
+    // margin: 8rem auto;
+    // background-color: $color-grey-light-2;
+    // box-shadow: $shadow-dark;
+    // //-- DEBUG CODE
+    // min-height: 85vh;
+    // padding: 3rem;
+    // padding-top: 0rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     //-- END DEBUG CODE
     // color: var();

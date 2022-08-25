@@ -1,49 +1,73 @@
 @import "../../AppVariables.scss";
 .header {
-  //   padding: 2rem 0rem;
-  //   padding-bottom: 8rem;
+  position: fixed;
+  box-sizing: border-box;
+  // outerWidth: 100%
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  background-color: $color-grey-light-2;
+  padding: 1rem 5rem;
+  padding-bottom: 0rem;
+  height: 6rem;
 
-  //   justify-content: space-between;
-  //   align-items: center;
-  font-size: 1.5rem;
-  padding: 1rem 0rem;
+  // -- DEBUG
+  // background-color: red;
+  // -- DEBUG
 
-  //   background: linear-gradient(rgba(0, 0, 0, 0.169), rgba(0, 0, 0, 0.7)),
-  //     url("../../assets/HeaderImage.jpg");
-  //   background-position: center;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  color: $color-white;
-
-  &__items {
-    // padding: 0rem 2rem;
-    color: $color-grey-dark-3;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 2rem;
+  &--small {
+    height: 7rem;
   }
 
-  &__cart {
+  &__items {
     display: flex;
-    flex-direction: column;
-    cursor: pointer;
-
+    justify-content: space-between;
+    align-items: center;
+    // overflow: hidden;
     fill: $color-grey-dark-3;
-    outline: none;
-    border: none;
-    &--button-icon {
-      height: 2.5rem;
+
+    &-logo {
+      height: 4rem;
+    }
+
+    &-cart {
+      display: flex;
+      // flex-direction: column;
+      outline: none;
+      border: none; // height: 3rem;
+      align-items: center;
+      // align-content: center;
+      background-color: $color-grey-light-2;
+      cursor: pointer;
+      position: relative;
+
+      &--icon {
+        height: 4rem;
+        padding: 0rem 0.5rem;
+      }
+
+      &--counter {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.5rem;
+        background-color: $color-grey-dark-3;
+        border-radius: 10rem;
+        color: $color-grey-light-2;
+        text-align: center;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        top: -1.5rem;
+        left: -2.5rem;
+      }
     }
   }
 
   //   background-image: linear-gradient(to right bottom, #ec6b6f, #b42e2e);
   &__gallery {
     display: flex;
-    flex-grow: 1;
-    // width: 100%;
-    // margin: 0 auto;
-    margin: 0 -3rem;
     &-item {
       max-width: 100%;
       overflow: hidden;
