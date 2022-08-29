@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-ordering-app/static/css/main.2c09d2e2.css",
-    "main.js": "/food-ordering-app/static/js/main.315c3e10.js",
+    "main.css": "/food-ordering-app/static/css/main.39bf5840.css",
+    "main.js": "/food-ordering-app/static/js/main.15ebaafd.js",
     "static/media/HeaderImage3.jpg": "/food-ordering-app/static/media/HeaderImage3.0394292e32b1cb8ed8f1.jpg",
     "static/media/marketing3.jpg": "/food-ordering-app/static/media/marketing3.7aa3517031d1ad45c426.jpg",
     "static/media/HeaderImage1.jpg": "/food-ordering-app/static/media/HeaderImage1.218cfdedaeeb89b7bc44.jpg",
@@ -9,11 +9,11 @@
     "static/media/marketing2.jpg": "/food-ordering-app/static/media/marketing2.8d4044b6db55764f180c.jpg",
     "static/media/marketing1.jpg": "/food-ordering-app/static/media/marketing1.263c97b861d9c179f948.jpg",
     "index.html": "/food-ordering-app/index.html",
-    "main.2c09d2e2.css.map": "/food-ordering-app/static/css/main.2c09d2e2.css.map",
-    "main.315c3e10.js.map": "/food-ordering-app/static/js/main.315c3e10.js.map"
+    "main.39bf5840.css.map": "/food-ordering-app/static/css/main.39bf5840.css.map",
+    "main.15ebaafd.js.map": "/food-ordering-app/static/js/main.15ebaafd.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c09d2e2.css",
-    "static/js/main.315c3e10.js"
+    "static/css/main.39bf5840.css",
+    "static/js/main.15ebaafd.js"
   ]
 }
