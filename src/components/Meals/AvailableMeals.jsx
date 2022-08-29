@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./AvailableMeals.scss";
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -29,7 +29,7 @@ const DUMMY_MEALS = [
 
 const AvailableMeals = (props) => {
   const mealsList = DUMMY_MEALS.map((meal) => {
-    <li>meal.name</li>;
+    return <li>{meal.name}</li>;
   });
 
   return (

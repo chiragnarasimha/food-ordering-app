@@ -1,59 +1,5 @@
 @import "../../AppVariables.scss";
 @import "/src/Mixins.scss";
-.summary {
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  max-width: 60rem;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  //   background-color: $color-grey-dark-3;
-  color: $color-grey-light-1;
-  border-radius: 1rem;
-  //   padding: 2rem;
-
-  //   background-image: linear-gradient(
-  //     to bottom right,
-  //     $color-primary-light,
-  //     $color-primary-dark
-  //   );
-  background-image: linear-gradient(to bottom right, #f5bd63, #ec5a3f);
-
-  box-shadow: $shadow-dark;
-
-  &__h2 {
-    overflow: hidden;
-    display: flex;
-    background-image: linear-gradient(to bottom right, #f5bd63, #ec5a3f);
-    width: 100%;
-    justify-content: center;
-    flex-grow: 1;
-    // width: 100%;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
-    padding: 1rem;
-  }
-
-  &__p {
-    padding: 2rem;
-    overflow: hidden;
-    font-size: 1.5rem;
-    background-color: $color-white;
-    color: $color-grey-dark-2;
-    &:last-child {
-      border-bottom-right-radius: 1rem;
-      border-bottom-left-radius: 1rem;
-    }
-  }
-}
-
 .meals-summary {
   color: $color-grey-dark-3;
 
