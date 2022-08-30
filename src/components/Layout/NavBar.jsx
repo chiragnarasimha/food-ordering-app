@@ -46,20 +46,23 @@ const NavBar = (props) => {
       <ul className="header__items__navbar__ul">
         {links.map((link) => {
           return (
-            <li
-              key={`li ${link.name} ${link.id}`}
-              className="header__items__navbar__li"
-            >
-              {link.icon}
-              <a
-                href={link.url}
-                key={`a ${link.name} ${link.id}`}
-                className="header__items__navbar__li__a"
-                onClick={handleClick}
+            <>
+              <li
+                key={`li ${link.name} ${link.id}`}
+                className="header__items__navbar__li"
               >
-                {link.text}
-              </a>
-            </li>
+                {link.icon}
+
+                <a
+                  href={link.url}
+                  key={`a ${link.name} ${link.id}`}
+                  className="header__items__navbar__li__a"
+                  onClick={handleClick}
+                >
+                  {link.text}
+                </a>
+              </li>
+            </>
           );
         })}
       </ul>
