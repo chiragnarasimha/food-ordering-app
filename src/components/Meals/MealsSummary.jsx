@@ -19,7 +19,7 @@ const MealsSummary = (props) => {
         </p>
       </section>
     </> */}
-      <section className="meals-summary">
+      <section className="meals-summary" id="home">
         <div className="meals-summary__left">
           <h2 className="meals-summary__h2">Delicious meals, hand crafted!</h2>
           <p className="meals-summary__p">
