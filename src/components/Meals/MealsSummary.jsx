@@ -21,7 +21,7 @@ const MealsSummary = (props) => {
     </> */}
       <section className="meals-summary" id="home">
         <div className="meals-summary__left">
-          <h2 className="meals-summary__h2">Delicious meals, hand crafted!</h2>
+          <h2 className="meals-summary__h2">Delicious Food, hand crafted!</h2>
           <p className="meals-summary__p">
             We combine traditional preparations with locally sourced ingredients
             to make it authentic. Lorem ipsum dolor sit amet consectetur

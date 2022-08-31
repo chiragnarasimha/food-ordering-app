@@ -41,13 +41,8 @@
     }
 
     &__navbar {
-      flex-grow: 1;
-      text-align: center;
-      // background-color: $color-black;
-      align-self: stretch;
       color: $color-grey-dark-3;
-      // height: 100%;
-      // padding: 2rem 0rem;
+      padding: 0 5rem;
 
       &__ul {
         list-style-type: none;
@@ -89,12 +84,11 @@
           transform: translateY(1.5px);
         }
 
+        flex-grow: 1;
         &__icon {
           height: 2.5rem;
-          width: 100%;
           padding-right: 1rem;
-          // fill: inherit;
-          // fill: $color-primary;
+          flex-grow: 0;
         }
 
         &__a {

@@ -4,7 +4,7 @@ import "./Header.scss";
 import HeaderImages from "../../assets/HeaderImages";
 import HeaderCartButton from "./HeaderCartButton";
 // import sushiIcon from "../../assets/sushiIcon.png";
-import { RestaurantLogo } from "../../assets/icons";
+import { RestaurantLogoFull } from "../../assets/icons";
 import NavBar from "./NavBar";
 
 const Header = () => {
@@ -27,7 +27,7 @@ const Header = () => {
     <>
       <header className={`header ${headerShadow && "header--shadow"}`}>
         <div className="header__items">
-          <RestaurantLogo className="header__items__logo" />
+          <RestaurantLogoFull className="header__items__logo" />
           <NavBar />
           <HeaderCartButton />
         </div>

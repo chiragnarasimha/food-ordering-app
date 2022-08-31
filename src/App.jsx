@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Layout/Header";
 import "./App.scss";
 import MealsMarketing from "./components/Meals/MealsMarketing";
-import AvailableMeals from "./components/Meals/AvailableMeals";
+import Menu from "./components/Meals/Menu";
 const App = (props) => {
   const render_content = () => {
     let content = [];
@@ -16,7 +16,7 @@ const App = (props) => {
       {/* <div> */}
       <Header />
       <MealsMarketing />
-      <AvailableMeals />
+      <Menu />
       {/* <div>Test Body</div>
       <div>{render_content()}</div> */}
     </div>

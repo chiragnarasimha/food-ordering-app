@@ -1,0 +1,12 @@
+@import "../../AppVariables.scss";
+@import "../../Mixins.scss";
+.card {
+  padding: 1rem;
+  box-shadow: $shadow-dark;
+  border-radius: 2rem;
+  background-color: $color-grey-light-2;
+  //   display: flex;
+  width: 90vw;
+  justify-content: center;
+  @include horizontalCenter;
+}
