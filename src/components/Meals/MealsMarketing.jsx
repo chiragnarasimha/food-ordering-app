@@ -1,9 +1,9 @@
 import MealsSummary from "./MealsSummary";
-import Menu from "./Menu";
+import "./MealsMarketing.scss";
 
 import React from "react";
 
-const Meals = (props) => {
+const MealsMarketing = (props) => {
   return (
     <>
       <MealsSummary />
@@ -12,4 +12,4 @@ const Meals = (props) => {
   );
 };
 
-export default Meals;
+export default MealsMarketing;

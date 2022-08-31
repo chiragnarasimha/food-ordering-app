@@ -7,18 +7,6 @@ import marketing3 from "../../assets/Marketing/marketing3.jpg";
 const MealsSummary = (props) => {
   return (
     <>
-      {/* <section className="summary">
-        <h2 className="summary__h2">Delicious Food, Delivered to You</h2>
-        <p className="summary__p">
-          Choose your favorite meal from our broad selection of available meals
-          and enjoy a delicious lunch or dinner at home.
-        </p>
-        <p className="summary__p">
-          All our meals are cooked with high-quality ingredients, just-in-time
-          and of course by experienced chefs!
-        </p>
-      </section>
-    </> */}
       <section className="meals-summary" id="home">
         <div className="meals-summary__left">
           <h2 className="meals-summary__h2">Delicious Food, hand crafted!</h2>
