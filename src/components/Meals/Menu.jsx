@@ -3,6 +3,7 @@ import "./Menu.scss";
 import Card from "../UI/Card";
 
 import { RestaurantLogoMini } from "../../assets/icons";
+import Meals from "./MealsMarketing";
 
 const DUMMY_MEALS = [
   {
@@ -29,11 +30,45 @@ const DUMMY_MEALS = [
     description: "Healthy...and green...",
     price: 18.99,
   },
+  {
+    id: "m4",
+    name: "Green Bowl",
+    description: "Healthy...and green...",
+    price: 18.99,
+  },
+  {
+    id: "m4",
+    name: "Green Bowl",
+    description: "Healthy...and green...",
+    price: 18.99,
+  },
+  {
+    id: "m4",
+    name: "Green Bowl",
+    description: "Healthy...and green...",
+    price: 18.99,
+  },
 ];
 
 const Menu = (props) => {
   const mealsList = DUMMY_MEALS.map((meal) => {
-    return <li>{meal.name}</li>;
+    return (
+      <li
+        key={`MenuItem Name ${meal.name} ${meal.id}`}
+        className="menu__column__inner-container__item"
+      >
+        <div className="menu__column__inner-container__item__name">
+          {meal.name}
+        </div>
+
+        <div className="menu__column__inner-container__item__description">
+          {meal.description}
+        </div>
+        <div className="menu__column__inner-container__item__price">
+          ${meal.price}
+        </div>
+      </li>
+    );
   });
 
   return (
@@ -48,12 +83,15 @@ const Menu = (props) => {
             <div className="menu__column__inner-container__left__logo">
               <RestaurantLogoMini className="menu__column__inner-container__left__logo__svg" />
             </div>
-            <div className="menu__column__inner-container__left__items">
+            <ul className="menu__column__inner-container__left__items">
+              {/* <div className="menu__column__inner-container__left__items__name">
+                
+              </div> */}
               {mealsList}
-            </div>
+            </ul>
           </div>
         </div>
-        <div className="menu__column">TEST</div>
+        {/* <div className="menu__column">TEST</div> */}
 
         {/* <Card> */}
         {/* <h1>Menu</h1>

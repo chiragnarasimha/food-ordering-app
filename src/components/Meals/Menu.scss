@@ -13,7 +13,7 @@
 }
 
 .menu {
-  height: 50rem;
+  // height: 62rem;
   @include horizontalCenter;
   display: flex;
   justify-content: center;
@@ -36,14 +36,17 @@
       height: 90%;
       width: 90%;
 
+      overflow: hidden;
+
       &__left {
         &__logo {
           height: 22rem;
           fill: $color-grey-light-2;
           background-color: $color-grey-dark-3;
-          border-top-right-radius: 0.85rem;
-          border-top-left-radius: 0.85rem;
+          // border-top-right-radius: 0.85rem;
+          // border-top-left-radius: 0.85rem;
           // border-radius: 0.85rem;
+          overflow: hidden;
           width: 100%;
           display: flex;
           justify-content: center;
@@ -54,6 +57,37 @@
         }
 
         &__items {
+          padding: 3rem 0rem;
+          margin-bottom: 6rem;
+          text-align: center;
+          list-style: none;
+          width: 80%;
+          @include horizontalCenter;
+        }
+      }
+
+      &__item {
+        // &:not(:last-child) {
+        text-align: center;
+        padding-bottom: 3rem;
+        // }
+
+        &--flex {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__name {
+          font-size: 2rem;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        &__price {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        &__description {
+          font-size: 1.2rem;
           text-align: center;
         }
       }
