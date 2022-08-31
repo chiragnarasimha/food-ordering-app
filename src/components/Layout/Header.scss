@@ -48,6 +48,10 @@
         list-style-type: none;
         display: flex;
         justify-content: center;
+        &__a {
+          color: inherit;
+          text-decoration: none;
+        }
       }
       &__li {
         display: flex;

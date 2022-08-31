@@ -47,21 +47,22 @@ const NavBar = (props) => {
         {links.map((link) => {
           return (
             <>
-              <li
-                key={`li ${link.name} ${link.id}`}
-                className="header__items__navbar__li"
-              >
-                {link.icon}
-
-                <a
-                  href={link.url}
-                  key={`a ${link.name} ${link.id}`}
-                  className="header__items__navbar__li__a"
-                  onClick={handleClick}
+              <a href={link.url} className="header__items__navbar__ul__a">
+                <li
+                  key={`li ${link.name} ${link.id}`}
+                  className="header__items__navbar__li"
                 >
-                  {link.text}
-                </a>
-              </li>
+                  {link.icon}
+                  <a
+                    href={link.url}
+                    key={`a ${link.name} ${link.id}`}
+                    className="header__items__navbar__li__a"
+                    onClick={handleClick}
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              </a>
             </>
           );
         })}
