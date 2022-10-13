@@ -21,7 +21,7 @@
 @mixin hiddenAnimation {
   opacity: 0;
   filter: blur(5px);
-  transform: scale(0.5) translateX(50%);
+  transform: scale(0.7) translateX(25%);
   transition: all 1s;
 }
 
