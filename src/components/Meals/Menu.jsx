@@ -52,7 +52,7 @@ const Menu = (props) => {
   const [menuContainer, menuContainerVisible] = useVisibleElement({
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.1,
   });
   const mealsList = DUMMY_MEALS.map((meal) => {
     return (

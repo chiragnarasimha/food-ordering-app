@@ -1,5 +1,5 @@
 @import "../../AppVariables.scss";
-
+@import "../../Mixins.scss";
 .header {
   position: fixed;
   box-sizing: border-box;
@@ -65,21 +65,6 @@
         color: $color-grey-dark-3;
 
         transition: all 0.2s;
-
-        @mixin hoverEffects {
-          background: linear-gradient(
-            -45deg,
-            #ee7752,
-            #e73c7e,
-            #23a6d5,
-            #23d5ab
-          );
-          background-size: 400% 400%;
-          animation: gradient 2s ease infinite;
-          color: $color-grey-light-1;
-          fill: $color-grey-light-1;
-          box-shadow: $shadow-button-dark;
-        }
 
         &:hover {
           @include hoverEffects();
@@ -149,20 +134,4 @@
       overflow: hidden;
     }
   }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.test {
-  pointer-events: none;
 }

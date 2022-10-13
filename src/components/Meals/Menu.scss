@@ -102,6 +102,10 @@
             color: $color-grey-light-2;
             padding: 1.5rem 2rem;
             border-radius: 1rem;
+
+            &:hover {
+              @include hoverEffects();
+            }
           }
         }
       }
