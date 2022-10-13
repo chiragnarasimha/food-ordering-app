@@ -30,6 +30,7 @@ const MenuItem = ({ meal }) => {
               id="menuQuantity"
               min="1"
               step="1"
+              value={1}
               className="menu__column__inner-container__item__right__form__input"
             />
             <button className="menu__column__inner-container__item__right__form__button">

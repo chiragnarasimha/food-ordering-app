@@ -34,7 +34,7 @@
       border-style: solid;
       border-radius: 1rem;
       border-color: $color-grey-dark-3;
-      height: 90%;
+      height: 93%;
       width: 90%;
 
       overflow: hidden;
@@ -62,7 +62,7 @@
           margin-bottom: 6rem;
           text-align: center;
           list-style: none;
-          width: 80%;
+          width: 90%;
           @include horizontalCenter;
         }
       }
@@ -104,23 +104,26 @@
             &__input {
               width: 5rem;
               text-align: center;
-              // color: $color-grey-light-3;
-              background-color: $color-grey-light-2;
+              color: $color-grey-dark-3;
+              background-color: $color-grey-light-1;
               border: none;
-              border-bottom-style: solid;
+              outline: solid $color-grey-dark-3;
+              // border-bottom-style: solid;
+              border-radius: 1rem;
               font-size: 2rem;
               &-label {
                 text-align: end;
-                align-self: flex-end;
+                align-self: center;
                 font-size: 2rem;
               }
 
               &:active,
               &:focus {
-                border: none;
-                border-bottom-style: solid;
-                outline: none;
-                border-bottom-color: #23a6d5;
+                // border: none;
+                // border-bottom-style: solid;
+                // outline: none;
+                // border-color: #23a6d5;
+                outline-color: #23a6d5;
               }
             }
             &__input::-webkit-outer-spin-button,
