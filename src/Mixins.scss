@@ -3,3 +3,32 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@mixin verticalCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absoluteCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin hiddenAnimation {
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(0.2);
+  transition: all 1s;
+}
+
+@mixin visibleAnimation {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+  transform: scale(1);
+  transition: all 1s;
+}

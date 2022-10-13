@@ -3,23 +3,15 @@
 .header {
   position: fixed;
   box-sizing: border-box;
-  // outerWidth: 100%
   top: 0px;
   left: 0px;
-  width: 100vw;
+  // max-width: 130rem;
+  // width: 100vw;
+  width: 100%;
   background-color: $color-grey-light-2;
   padding: 1rem 5rem;
-  // padding-bottom: 0rem;
-  // padding-top: 1rem;
   height: 6rem;
   z-index: 1000;
-
-  // -- DEBUG
-  // background-color: red;
-  // -- DEBUG
-
-  // box-shadow: $shadow-light;
-
   transition: all 0.2s;
 
   &--shadow {
@@ -31,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     // overflow: hidden;
     fill: $color-grey-dark-3;
 
@@ -43,6 +36,7 @@
     &__navbar {
       color: $color-grey-dark-3;
       padding: 0 5rem;
+      // max-width: 50rem;
 
       &__ul {
         list-style-type: none;
@@ -142,7 +136,7 @@
   }
 
   //   background-image: linear-gradient(to right bottom, #ec6b6f, #b42e2e);
-  &__gallery {
+  &__bottom-spacer {
     display: flex;
     margin-bottom: 7rem;
     &__item {

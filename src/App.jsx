@@ -3,6 +3,7 @@ import Header from "./components/Layout/Header";
 import "./App.scss";
 import MealsMarketing from "./components/Meals/MealsMarketing";
 import Menu from "./components/Meals/Menu";
+import MealsSummary from "./components/Meals/MealsSummary";
 const App = (props) => {
   const render_content = () => {
     let content = [];
@@ -15,10 +16,13 @@ const App = (props) => {
     <div className="app__container">
       {/* <div> */}
       <Header />
-      <MealsMarketing />
-      <Menu />
-      {/* <div>Test Body</div>
+      <div className="app__container__body">
+        {/* <MealsMarketing /> */}
+        <MealsSummary />
+        <Menu />
+        {/* <div>Test Body</div>
       <div>{render_content()}</div> */}
+      </div>
     </div>
   );
 };

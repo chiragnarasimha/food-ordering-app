@@ -68,28 +68,28 @@
       }
 
       &__item {
-        // &:not(:last-child) {
-        text-align: center;
-        padding-bottom: 3rem;
-        // }
-
-        &--flex {
-          display: flex;
-          justify-content: space-between;
+        // text-align: center;
+        display: flex;
+        justify-content: space-between;
+        // @include horizontalCenter();
+        &__left {
+          padding-bottom: 3rem;
+          &__name {
+            font-size: 2rem;
+            text-align: center;
+            text-transform: uppercase;
+          }
+          &__price {
+            font-size: 1.5rem;
+            text-align: center;
+          }
+          &__description {
+            font-size: 1.2rem;
+            text-align: center;
+          }
         }
 
-        &__name {
-          font-size: 2rem;
-          text-align: center;
-          text-transform: uppercase;
-        }
-        &__price {
-          font-size: 1.5rem;
-          text-align: center;
-        }
-        &__description {
-          font-size: 1.2rem;
-          text-align: center;
+        &__right {
         }
       }
     }

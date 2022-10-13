@@ -32,11 +32,7 @@ const Header = () => {
           <HeaderCartButton />
         </div>
       </header>
-      <div className="header__gallery">
-        {/* <img className="header__gallery__item" src={HeaderImages.img1} alt="" />
-        <img className="header__gallery__item" src={HeaderImages.img2} alt="" />
-        <img className="header__gallery__item" src={HeaderImages.img3} alt="" /> */}
-      </div>
+      <div className="header__bottom-spacer" />
     </>
   );
 };

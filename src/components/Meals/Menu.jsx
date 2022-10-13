@@ -1,9 +1,6 @@
 import React from "react";
 import "./Menu.scss";
-import Card from "../UI/Card";
-
 import { RestaurantLogoMini } from "../../assets/icons";
-import Meals from "./MealsMarketing";
 
 const DUMMY_MEALS = [
   {
@@ -53,19 +50,20 @@ const DUMMY_MEALS = [
 const Menu = (props) => {
   const mealsList = DUMMY_MEALS.map((meal) => {
     return (
-      <li
-        key={`MenuItem Name ${meal.name} ${meal.id}`}
-        className="menu__column__inner-container__item"
-      >
-        <div className="menu__column__inner-container__item__name">
-          {meal.name}
-        </div>
-
-        <div className="menu__column__inner-container__item__description">
-          {meal.description}
-        </div>
-        <div className="menu__column__inner-container__item__price">
-          ${meal.price}
+      <li key={`MenuItem Name ${meal.name} ${meal.id}`}>
+        <div className="menu__column__inner-container__item">
+          <div className="menu__column__inner-container__item__left">
+            <div className="menu__column__inner-container__item__left__name">
+              {meal.name}
+            </div>
+            <div className="menu__column__inner-container__item__left__description">
+              {meal.description}
+            </div>
+            <div className="menu__column__inner-container__item__left__price">
+              ${meal.price}
+            </div>
+          </div>
+          <div className="menu__column__inner-container__item__right">TEST</div>
         </div>
       </li>
     );
