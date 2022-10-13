@@ -2,6 +2,7 @@ import React from "react";
 import "./Menu.scss";
 import { RestaurantLogoMini } from "../../assets/icons";
 import useVisibleElement from "../../Hooks/useVisibleElement";
+import MenuItem from "./MenuItem";
 
 const DUMMY_MEALS = [
   {
@@ -25,25 +26,25 @@ const DUMMY_MEALS = [
   {
     id: "m4",
     name: "Green Bowl",
-    description: "Healthy...and green...",
+    description: "Healthy...and Green...",
     price: 18.99,
   },
   {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
+    id: "m5",
+    name: "Yellow Bowl",
+    description: "Healthy...and Yellow...",
     price: 18.99,
   },
   {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
+    id: "m6",
+    name: "Red Bowl",
+    description: "Healthy...and Red...",
     price: 18.99,
   },
   {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
+    id: "m7",
+    name: "Blue Bowl",
+    description: "Healthy...and Blue...",
     price: 18.99,
   },
 ];
@@ -55,28 +56,7 @@ const Menu = (props) => {
     threshold: 0.1,
   });
   const mealsList = DUMMY_MEALS.map((meal) => {
-    return (
-      <li key={`MenuItem Name ${meal.name} ${meal.id}`}>
-        <div className="menu__column__inner-container__item">
-          <div className="menu__column__inner-container__item__left">
-            <div className="menu__column__inner-container__item__left__name">
-              {meal.name}
-            </div>
-            <div className="menu__column__inner-container__item__left__description">
-              {meal.description}
-            </div>
-            <div className="menu__column__inner-container__item__left__price">
-              ${meal.price}
-            </div>
-          </div>
-          <div className="menu__column__inner-container__item__right">
-            <button className="menu__column__inner-container__item__right__button">
-              Add to cart
-            </button>
-          </div>
-        </div>
-      </li>
-    );
+    return <MenuItem meal={meal} />;
   });
 
   return (
@@ -92,21 +72,10 @@ const Menu = (props) => {
               <RestaurantLogoMini className="menu__column__inner-container__left__logo__svg" />
             </div>
             <ul className="menu__column__inner-container__left__items">
-              {/* <div className="menu__column__inner-container__left__items__name">
-                
-              </div> */}
               {mealsList}
             </ul>
           </div>
         </div>
-        {/* <div className="menu__column">TEST</div> */}
-
-        {/* <Card> */}
-        {/* <h1>Menu</h1>
-      <div>
-        <ul>{mealsList}</ul>
-      </div> */}
-        {/* </Card> */}
       </div>
     </section>
   );
