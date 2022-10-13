@@ -1,29 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
+import { useRef } from "react";
 import { HomeIcon, MenuIcon, PhoneIcon } from "../../assets/icons";
 // import "./NavBar.scss";
 
 import "./Header.scss";
-
-const links = [
-  {
-    id: 1,
-    text: "Home",
-    url: "#home",
-    icon: <HomeIcon className="header__items__navbar__li__icon" />,
-  },
-  {
-    id: 2,
-    text: "Menu",
-    url: "#menu",
-    icon: <MenuIcon className="header__items__navbar__li__icon" />,
-  },
-  {
-    id: 3,
-    text: "Contact",
-    url: "#contact-us",
-    icon: <PhoneIcon className="header__items__navbar__li__icon" />,
-  },
-];
 
 const NavBar = (props) => {
   /**
@@ -41,27 +22,49 @@ const NavBar = (props) => {
     });
   };
 
+  const links = [
+    {
+      id: 1,
+      text: "Home",
+      url: "#home",
+      icon: <HomeIcon className="header__items__navbar__button__icon" />,
+    },
+    {
+      id: 2,
+      text: "Menu",
+      url: "#menu",
+      icon: <MenuIcon className="header__items__navbar__button__icon" />,
+    },
+    {
+      id: 3,
+      text: "Contact",
+      url: "#contact-us",
+      icon: <PhoneIcon className="header__items__navbar__button__icon" />,
+    },
+  ];
+
   return (
     <div className="header__items__navbar">
       <ul className="header__items__navbar__ul">
         {links.map((link) => {
           return (
             <>
-              <a href={link.url} className="header__items__navbar__ul__a">
-                <li
-                  key={`li ${link.name} ${link.id}`}
-                  className="header__items__navbar__li"
+              <a
+                href={link.url}
+                key={`a1 ${link.text} ${link.id}`}
+                className="header__items__navbar__ul__a1"
+                onClick={handleClick}
+              >
+                <button
+                  key={`li ${link.text} ${link.id}`}
+                  className="header__items__navbar__button"
+                  href={link.url}
                 >
                   {link.icon}
-                  <a
-                    href={link.url}
-                    key={`a ${link.name} ${link.id}`}
-                    className="header__items__navbar__li__a"
-                    onClick={handleClick}
-                  >
+                  <span className="header__items__navbar__button__span">
                     {link.text}
-                  </a>
-                </li>
+                  </span>
+                </button>
               </a>
             </>
           );

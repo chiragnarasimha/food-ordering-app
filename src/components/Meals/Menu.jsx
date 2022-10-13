@@ -1,6 +1,7 @@
 import React from "react";
 import "./Menu.scss";
 import { RestaurantLogoMini } from "../../assets/icons";
+import useVisibleElement from "../../Hooks/useVisibleElement";
 
 const DUMMY_MEALS = [
   {
@@ -48,6 +49,11 @@ const DUMMY_MEALS = [
 ];
 
 const Menu = (props) => {
+  const [menuContainer, menuContainerVisible] = useVisibleElement({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  });
   const mealsList = DUMMY_MEALS.map((meal) => {
     return (
       <li key={`MenuItem Name ${meal.name} ${meal.id}`}>
@@ -63,18 +69,22 @@ const Menu = (props) => {
               ${meal.price}
             </div>
           </div>
-          <div className="menu__column__inner-container__item__right">TEST</div>
+          <div className="menu__column__inner-container__item__right">
+            <button className="menu__column__inner-container__item__right__button">
+              Add to cart
+            </button>
+          </div>
         </div>
       </li>
     );
   });
 
   return (
-    <section id="menu">
-      {/* <div className="menu__heading">
-        <h1 className="menu__heading__h1">Menu</h1>
-      </div> */}
-
+    <section
+      id="menu"
+      ref={menuContainer}
+      className={menuContainerVisible ? "menu__visible" : "menu__hidden"}
+    >
       <div className="menu">
         <div className="menu__column">
           <div className="menu__column__inner-container">
