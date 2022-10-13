@@ -163,6 +163,6 @@
   }
 
   &__hidden {
-    @include hiddenAnimation;
+    @include hiddenAnimationBottomIn;
   }
 }

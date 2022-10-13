@@ -56,7 +56,7 @@
   // border: 2rem 2rem $color-black;
   // border-style: solid;
   &__hidden {
-    @include hiddenAnimation;
+    @include hiddenAnimationRightIn;
   }
 
   &__visible {

@@ -18,19 +18,33 @@
   transform: translateX(-50%);
 }
 
-@mixin hiddenAnimation {
+@mixin hiddenAnimationRightIn {
   opacity: 0;
   filter: blur(5px);
   transform: scale(0.7) translateX(25%);
   transition: all 1s;
 }
 
+@mixin hiddenAnimationBottomIn {
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(1) translateY(50%);
+  transition: all 1s;
+}
+
 @mixin visibleAnimation {
   opacity: 1;
   filter: blur(0px);
-  transform: scale(1) translateX(0%);
+  transform: scale(1) translate(0%);
   transition: all 1s;
 }
+
+// @mixin visibleAnimationBottomIn {
+//   opacity: 1;
+//   filter: blur(0px);
+//   transform: scale(1) translateX(0%);
+//   transition: all 1s;
+// }
 
 @mixin hoverEffects {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
