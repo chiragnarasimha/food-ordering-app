@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import "./Header.scss";
-import HeaderImages from "../../assets/HeaderImages";
-import HeaderCartButton from "./HeaderCartButton";
+import HeaderCartButton from "../Cart/HeaderCartButton";
 // import sushiIcon from "../../assets/sushiIcon.png";
 import { RestaurantLogoFull } from "../../assets/icons";
 import NavBar from "./NavBar";
+import { useContext } from "react";
+import CartContext from "../../Storage/cart-context";
 
-const Header = () => {
+const Header = ({ onShowCart }) => {
   const [headerShadow, setHeaderShadow] = useState(false);
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY < 100) {
@@ -23,13 +23,23 @@ const Header = () => {
       window.removeEventListener("scroll", () => {});
     };
   }, []);
+
+  const cartCtx = useContext(CartContext);
+
+  const numberOfCartItems = cartCtx.items.reduce((accumulator, item) => {
+    return accumulator + item.amount;
+  }, 0);
+
   return (
     <>
       <header className={`header ${headerShadow && "header--shadow"}`}>
         <div className="header__items">
           <RestaurantLogoFull className="header__items__logo" />
           <NavBar />
-          <HeaderCartButton />
+          <HeaderCartButton
+            onShowCart={onShowCart}
+            numberOfCartItems={numberOfCartItems}
+          />
         </div>
       </header>
       <div className="header__bottom-spacer" />

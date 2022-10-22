@@ -1,0 +1,27 @@
+@import "../../AppVariables.scss";
+@import "../../Mixins.scss";
+.modal {
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: all 1s;
+  }
+
+  &__content {
+    transition: all 1s;
+    width: 35vw;
+    height: 70vh;
+    background-color: $color-grey-light-2;
+    padding: 3rem;
+    border-radius: 1rem;
+    z-index: 30;
+    @include absoluteCenter;
+    position: fixed;
+    box-shadow: $shadow-dark;
+  }
+}

@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "./components/Layout/Header";
 import "./App.scss";
-import MealsMarketing from "./components/Meals/MealsMarketing";
 import Menu from "./components/Meals/Menu";
 import MealsSummary from "./components/Meals/MealsSummary";
+import Cart from "./components/Cart/Cart";
+import { useState } from "react";
+import CartProvider from "./Storage/CartProvider";
+import CartContext from "./Storage/cart-context";
 const App = (props) => {
-  const render_content = () => {
-    let content = [];
-    for (let i = 0; i < 500; i++) {
-      content.push(<div key={i}>Test Content</div>);
-    }
-    return content;
+  const [cartIsShown, setCartIsShown] = useState(false);
+  const showCartHandler = () => {
+    setCartIsShown(true);
   };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
+  const cartCtx = useContext(CartContext);
+
   return (
-    <div className="app__container">
-      {/* <div> */}
-      <Header />
-      <div className="app__container__body">
-        {/* <MealsMarketing /> */}
-        <MealsSummary />
-        <Menu />
-        {/* <div>Test Body</div>
-      <div>{render_content()}</div> */}
+    <CartProvider>
+      <div className="app__container">
+        <Header onShowCart={showCartHandler} />
+        <div className="app__container__body">
+          <MealsSummary />
+          <Menu />
+          {cartIsShown && <Cart onClose={hideCartHandler} />}
+        </div>
       </div>
-    </div>
+    </CartProvider>
   );
 };
 

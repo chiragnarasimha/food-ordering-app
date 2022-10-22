@@ -1,0 +1,108 @@
+@import "../../AppVariables.scss";
+@import "../../Mixins.scss";
+
+.cart {
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 1s;
+
+  &__heading {
+    background-color: $color-grey-dark-3;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+    // padding: 0rem 2rem;
+    // padding-left: 2rem;
+    color: $color-grey-light-2;
+    &__h1 {
+      font-size: 4rem;
+    }
+    &__icon {
+      height: 50%;
+      fill: $color-grey-light-2;
+    }
+  }
+
+  &__body {
+    padding: 3rem;
+    display: flex;
+
+    // 85% as the header is using 15% of the height
+    height: 85%;
+    flex-direction: column;
+    justify-content: space-between;
+    &__content {
+      &__items {
+        list-style: none;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      &__total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.5rem;
+        // font-weight: bold;
+        font-weight: 900;
+      }
+      &__user-actions {
+        display: flex;
+        justify-content: right;
+        gap: 2rem;
+        font-size: 1.5rem;
+
+        &__button {
+          outline: none;
+          border: none;
+          cursor: pointer;
+          background-color: $color-grey-dark-3;
+          color: $color-grey-light-2;
+          padding: 1.5rem 2rem;
+          border-radius: 1rem;
+          transition: all 0.2s;
+
+          &:hover {
+            @include hoverEffects();
+          }
+          &:active {
+            @include hoverEffects();
+            transform: translateY(1.5px);
+          }
+
+          & + span {
+            pointer-events: none;
+            color: inherit;
+          }
+        }
+
+        &__close {
+          font-size: inherit;
+        }
+        &__order {
+          font-size: inherit;
+        }
+      }
+    }
+    // &__items {
+    //   // background-color: $color-black;
+    //   text-decoration: none;
+    //   list-style: none;
+    // }
+
+    // &__footer {
+    //   &__total {
+    //     // background-color: $color-black;
+    //     // align-self: flex-end;
+    //   }
+    // }
+  }
+}
