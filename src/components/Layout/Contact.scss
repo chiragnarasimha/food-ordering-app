@@ -1,0 +1,33 @@
+@import "../../AppVariables.scss";
+.footer {
+  background-color: $color-grey-dark-3;
+  padding: 4rem 0;
+
+  font-size: 1.4rem;
+  color: $color-grey-light-2;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+
+  &__logo {
+    width: 20rem;
+    height: auto;
+    fill: $color-grey-light-2;
+    align-self: center;
+    align-content: center;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    &__column {
+      h1 {
+        margin-bottom: 2rem;
+      }
+      p {
+        max-width: 25rem;
+      }
+    }
+  }
+}
