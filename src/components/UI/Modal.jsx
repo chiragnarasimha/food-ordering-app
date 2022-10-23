@@ -1,4 +1,5 @@
 import "./Modal.scss";
+import "../Cart/Cart.scss";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -10,6 +11,7 @@ const ModalContent = (props) => {
   return (
     <div className={`modal__content ${props.additionalClassNames}`}>
       {props.children}
+      {console.log(props.additionalClassNames)}
     </div>
   );
 };

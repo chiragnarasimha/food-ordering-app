@@ -13,7 +13,7 @@
   }
 
   &__content {
-    transition: all 1s;
+    // transition: all 1s;
     width: 35vw;
     height: 70vh;
     background-color: $color-grey-light-2;
@@ -23,5 +23,10 @@
     @include absoluteCenter;
     position: fixed;
     box-shadow: $shadow-dark;
+
+    // //debug
+    // transform: scale(0.1);
+    // top: -30%;
+    // left: 77%;
   }
 }

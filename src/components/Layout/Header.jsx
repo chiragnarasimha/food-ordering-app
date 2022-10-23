@@ -8,7 +8,7 @@ import NavBar from "./NavBar";
 import { useContext } from "react";
 import CartContext from "../../Storage/cart-context";
 
-const Header = ({ onShowCart }) => {
+const Header = () => {
   const [headerShadow, setHeaderShadow] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -36,10 +36,7 @@ const Header = ({ onShowCart }) => {
         <div className="header__items">
           <RestaurantLogoFull className="header__items__logo" />
           <NavBar />
-          <HeaderCartButton
-            onShowCart={onShowCart}
-            numberOfCartItems={numberOfCartItems}
-          />
+          <HeaderCartButton numberOfCartItems={numberOfCartItems} />
         </div>
       </header>
       <div className="header__bottom-spacer" />

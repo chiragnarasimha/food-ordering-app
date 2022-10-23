@@ -25,6 +25,7 @@
     border-radius: 1rem;
     box-shadow: $shadow-dark;
     width: 40%;
+    max-width: 68rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,6 +155,10 @@
                 pointer-events: none;
                 color: inherit;
               }
+            }
+
+            &__error-message {
+              color: $color-primary-light;
             }
           }
         }
