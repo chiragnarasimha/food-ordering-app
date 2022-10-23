@@ -38,8 +38,69 @@
     flex-direction: column;
     justify-content: space-between;
     &__content {
+      overflow-y: scroll;
       &__items {
         list-style: none;
+        font-size: 3rem;
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 2rem;
+          padding-bottom: 2rem;
+
+          &__details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: inherit;
+            font-weight: bold;
+          }
+          &__other {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: inherit;
+
+            gap: 1rem;
+            &__quantity {
+              display: flex;
+              font-size: inherit;
+
+              span {
+                font-size: inherit;
+              }
+            }
+            &__actions {
+              display: flex;
+              gap: 1rem;
+              button {
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background-color: $color-grey-dark-3;
+                color: $color-grey-light-2;
+                // padding: 1.5rem 2rem;
+                padding: 0.3rem 1rem;
+                border-radius: 1rem;
+                transition: all 0.2s;
+
+                &:hover {
+                  @include hoverEffects();
+                }
+                &:active {
+                  @include hoverEffects();
+                  transform: translateY(1.5px);
+                }
+
+                &__span {
+                  pointer-events: none;
+                  color: inherit;
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -106,12 +167,12 @@
     // }
   }
 
-  &__hiddenAnimation {
-    opacity: 0;
-    filter: blur(5px);
-    transform: scale(0) translate(0%);
-    transition: all 1s;
-  }
+  // &__hiddenAnimation {
+  //   opacity: 0;
+  //   filter: blur(5px);
+  //   transform: scale(0) translate(0%);
+  //   transition: all 1s;
+  // }
 
   &__visibleAnimation {
     opacity: 1;

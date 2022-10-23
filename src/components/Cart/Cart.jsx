@@ -5,16 +5,32 @@ import Modal from "../UI/Modal";
 import { HeaderCartIcon } from "../../assets/icons";
 import { useContext } from "react";
 import CartContext from "../../Storage/cart-context";
+import CartItem from "./CartItem";
 
 const Cart = ({ onClose }) => {
   const cartCtx = useContext(CartContext);
   const onCloseHandler = () => {
     cartCtx.showCart(false);
   };
+
+  const totalAmount = cartCtx.totalAmount.toFixed(2);
+  const hasItems = cartCtx.items.length > 0;
+
+  const cartItemRemoveHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
+  const cartItemAddHandler = (item) => {
+    cartCtx.addItem({ ...item, amount: 1 });
+  };
+
   const cartItems = (
     <ul className="cart__body__content__items">
       {cartCtx.items.map((item) => (
-        <li>{item.name}</li>
+        <CartItem
+          item={item}
+          onAdd={cartItemAddHandler.bind(null, item)}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+        />
       ))}
     </ul>
   );
@@ -39,7 +55,7 @@ const Cart = ({ onClose }) => {
               <div className="cart__body__footer">
                 <div className="cart__body__footer__total">
                   <span>Total Amount</span>
-                  <span>35.652</span>
+                  <span>{`$${totalAmount}`}</span>
                 </div>
                 <div className="cart__body__footer__user-actions">
                   <button
@@ -50,11 +66,13 @@ const Cart = ({ onClose }) => {
                       Close
                     </span>
                   </button>
-                  <button className="cart__body__footer__user-actions__button">
-                    <span className="cart__body__footer__user-actions__order">
-                      Order
-                    </span>
-                  </button>
+                  {hasItems && (
+                    <button className="cart__body__footer__user-actions__button">
+                      <span className="cart__body__footer__user-actions__order">
+                        Order
+                      </span>
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
