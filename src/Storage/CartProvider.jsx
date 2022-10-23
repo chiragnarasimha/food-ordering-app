@@ -25,12 +25,6 @@ const cartReducer = (state, action) => {
       break;
     case "SHOW_CART":
       const updatedCartIsShown = action.cartIsShown;
-
-      // console.log({
-      //   filename: "CartProvider.jsx",
-      //   whoCalled: "cartReducer > SHOW_CART",
-      //   state_cartIsShown: updatedCartIsShown,
-      // });
       return {
         items: state.items,
         totalAmount: state.totalAmount,
@@ -44,14 +38,7 @@ const cartReducer = (state, action) => {
 };
 
 const CartProvider = (props) => {
-  // const [cartIsShown, setCartIsShown] = useState(false);
   const cartVisibilityHandler = (cartIsShown) => {
-    // setCartIsShown(true);
-    // console.log({
-    //   filename: "CartProvider.jsx",
-    //   whoCalled: "showCartHandler",
-
-    // });
     dispatchCartAction({ type: "SHOW_CART", cartIsShown: cartIsShown });
   };
 
@@ -64,7 +51,7 @@ const CartProvider = (props) => {
     dispatchCartAction({ type: "ADD_ITEM", item: item });
   };
   const removeItemFromCartHandler = (id) => {
-    dispatchCartAction({ type: "ADD_ITEM", id: id });
+    dispatchCartAction({ type: "REMOVE_ITEM", id: id });
   };
 
   const cartContext = {
